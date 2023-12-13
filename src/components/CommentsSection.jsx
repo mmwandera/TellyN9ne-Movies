@@ -1,6 +1,7 @@
 // components/CommentsSection.js - Component for displaying user comments
 
 import React, { useState } from 'react';
+import './style.css';
 
 function CommentsSection() {
   const [comments, setComments] = useState([]);
