@@ -5,21 +5,34 @@ import React, { useState } from 'react';
 function CommentsSection() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  const [userName, setUserName] = useState('');
 
   const handleCommentChange = (event) => {
     setNewComment(event.target.value);
   };
 
+  const handleNameChange = (event) => {
+    setUserName(event.target.value);
+  };
+
   const handlePostComment = () => {
-    if (newComment.trim() !== '') {
-      setComments((prevComments) => [newComment, ...prevComments]);
+    if (userName.trim() !== '' && newComment.trim() !== '') {
+      const commentWithUser = `${userName}: ${newComment}`;
+      setComments((prevComments) => [commentWithUser, ...prevComments]);
       setNewComment('');
+      setUserName('');
     }
   };
 
   return (
     <div className="comments-section">
       <div className="comment-input">
+        <input
+          type="text"
+          value={userName}
+          onChange={handleNameChange}
+          placeholder="Your Name"
+        />
         <textarea
           value={newComment}
           onChange={handleCommentChange}
