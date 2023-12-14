@@ -12,8 +12,8 @@ function Banner() {
     <section className="banner" style={bannerStyle}>
       <div className="banner-content">
         <div className="movie-info">
-          <h1>Movie Title</h1>
-          <p>Brief description of the movie goes here.</p>
+          <h1>Title Movie</h1>
+          <p> Brief description of the movie goes here.</p>
         </div>
       </div>
     </section>

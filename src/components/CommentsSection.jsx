@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './style.css';
 
@@ -68,7 +69,7 @@ function CommentsSection() {
   }
 
   return (
-    <div className="comments-section">
+    <CommentsSectionWrapper>
       <div className="comment-input">
         <input
           type="text"
@@ -91,7 +92,7 @@ function CommentsSection() {
           </div>
         ))}
       </div>
-    </div>
+    </CommentsSectionWrapper>
   );
 }
 
