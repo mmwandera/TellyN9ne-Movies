@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 
-
-
 function PopularMovies() {
   const [movies, setMovies] = useState([]);
 
