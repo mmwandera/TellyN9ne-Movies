@@ -1,6 +1,6 @@
-
 import React from 'react';
 import './style.css';
+
 function Banner() {
   const bannerStyle = {
     backgroundImage: 'url("banner.jpg")',

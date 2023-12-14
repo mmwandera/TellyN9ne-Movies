@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 function CommentsSection() {
@@ -6,22 +7,66 @@ function CommentsSection() {
   const [newComment, setNewComment] = useState('');
   const [userName, setUserName] = useState('');
 
-  const handleCommentChange = (event) => {
+  useEffect(() => {
+    fetchCommentsFromServer();
+  }, []);
+
+  function fetchCommentsFromServer() {
+    fetch('http://localhost:4000/comments')
+      .then(response => response.json())
+      .then(data => setComments(data))
+      .catch(error => console.error('Error fetching comments:', error));
+  }
+
+  function handleCommentChange(event) {
     setNewComment(event.target.value);
-  };
+  }
 
-  const handleNameChange = (event) => {
+  function handleNameChange(event) {
     setUserName(event.target.value);
-  };
+  }
 
-  const handlePostComment = () => {
+  function handlePostComment() {
     if (userName.trim() !== '' && newComment.trim() !== '') {
-      const commentWithUser = `${userName}: ${newComment}`;
-      setComments((prevComments) => [commentWithUser, ...prevComments]);
+      const commentData = {
+        name: userName,
+        comment: newComment,
+      };
+
+      fetch('http://localhost:4000/comments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(commentData),
+      })
+        .then(response => {
+          if (response.ok) {
+            fetchCommentsFromServer();
+          } else {
+            console.error('Failed to add comment to server.');
+          }
+        })
+        .catch(error => console.error('Error posting comment:', error));
+
       setNewComment('');
       setUserName('');
     }
-  };
+  }
+
+  function handleDeleteComment(commentId) {
+    fetch(`http://localhost:4000/comments/${commentId}`, {
+      method: 'DELETE',
+    })
+      .then(response => {
+        if (response.ok) {
+          fetchCommentsFromServer();
+        } else {
+          console.error('Failed to delete comment from server.');
+        }
+      })
+      .catch(error => console.error('Error deleting comment:', error));
+  }
 
   return (
     <CommentsSectionWrapper>
@@ -40,10 +85,10 @@ function CommentsSection() {
         <button onClick={handlePostComment}>Post</button>
       </div>
       <div className="comment-list">
-        {/* Display user comments here */}
-        {comments.map((comment, index) => (
-          <div key={index} className="comment">
-            <p>{comment}</p>
+        {comments.slice().reverse().map(comment => (
+          <div key={comment.id} className="comment">
+            <p>{comment.name}: {comment.comment}</p>
+            <button onClick={() => handleDeleteComment(comment.id)}>Delete</button>
           </div>
         ))}
       </div>
@@ -52,25 +97,3 @@ function CommentsSection() {
 }
 
 export default CommentsSection;
-
-
-
-
-// import React from 'react';
-
-// function CommentsSection() {
-//   return (
-//     <div className="comments-section">
-//       {/* Display user comments here */}
-//       <div className="comment">
-//         <p>User Comment 1</p>
-//       </div>
-//       <div className="comment">
-//         <p>User Comment 2</p>
-//       </div>
-//       {/* Add more comments as needed */}
-//     </div>
-//   );
-// }
-
-// export default CommentsSection;
