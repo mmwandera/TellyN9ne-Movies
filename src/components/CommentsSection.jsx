@@ -1,5 +1,3 @@
-// components/CommentsSection.js - Component for displaying user comments
-
 import React, { useState } from 'react';
 import './style.css';
 
@@ -26,7 +24,7 @@ function CommentsSection() {
   };
 
   return (
-    <div className="comments-section">
+    <CommentsSectionWrapper>
       <div className="comment-input">
         <input
           type="text"
@@ -49,11 +47,13 @@ function CommentsSection() {
           </div>
         ))}
       </div>
-    </div>
+    </CommentsSectionWrapper>
   );
 }
 
 export default CommentsSection;
+
+
 
 
 // import React from 'react';
