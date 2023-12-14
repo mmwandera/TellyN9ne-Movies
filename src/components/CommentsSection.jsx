@@ -69,7 +69,7 @@ function CommentsSection() {
   }
 
   return (
-    <CommentsSectionWrapper>
+   <div className = "comments-section">
       <div className="comment-input">
         <input
           type="text"
@@ -92,8 +92,29 @@ function CommentsSection() {
           </div>
         ))}
       </div>
-    </CommentsSectionWrapper>
-  );
+    </div>
+      );
+    
 }
 
 export default CommentsSection;
+
+
+// import React from 'react';
+
+// function CommentsSection() {
+//   return (
+//     <div className="comments-section">
+//       {/* Display user comments here */}
+//       <div className="comment">
+//         <p>User Comment 1</p>
+//       </div>
+//       <div className="comment">
+//         <p>User Comment 2</p>
+//       </div>
+//       {/* Add more comments as needed */}
+//     </div>
+//   );
+// }
+
+// export default CommentsSection;
