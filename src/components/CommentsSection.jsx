@@ -69,7 +69,7 @@ function CommentsSection() {
   }
 
   return (
-    <CommentsSectionWrapper>
+   <div className = "comments-section">
       <div className="comment-input">
         <input
           type="text"
@@ -92,8 +92,9 @@ function CommentsSection() {
           </div>
         ))}
       </div>
-    </CommentsSectionWrapper>
-  );
+    </div>
+      );
+    
 }
 
 export default CommentsSection;
