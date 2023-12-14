@@ -7,7 +7,6 @@ function Content() {
     return (
       <section className="content">
         <div className="left-column">
-          <h2>Popular Movies and Shows</h2>
           <PopularMovies />
         </div>
         <div className="right-column">

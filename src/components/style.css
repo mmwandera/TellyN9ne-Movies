@@ -1,137 +1,188 @@
 /* styles.css */
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: #fff; 
-    background-color: #121212; 
-  }
-  
-  header {
-    background-color: #121212;
-    padding: 20px;
-  }
-  
-  .logo img {
-    width: 100px; 
-  }
-  
-  .banner {
-    position: relative;
-    height: 400px; 
-    color: #fff;
-  }
-  
-  .banner-content {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-  }
-  
-  .banner h1 {
-    font-family: 'Vast Shadow', cursive;
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .banner p {
-    font-size: 1.2rem;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-  .left-column {
-    flex: 2; 
-  }
-  
-  .right-column {
-    flex: 1;
-  }
-  
-  .movie-card {
-    margin: 10px;
-    padding: 10px;
-    background-color: #1e1e1e; 
-    border: 2px solid #00A9FF; 
-    width: 25%;
-  }
-  
-  .movie-card img {
-    width: 100%;
-    height: auto; 
-  }
-  
-  .movie-card h3 {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
-  
-  .movie-card p {
-    margin: 5px 0;
-  }
-  
-  .comment-input {
-    margin: 10px;
-  }
-  
-  input[type="text"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #00A9FF; 
-    background-color: #1e1e1e; 
-    color: #fff;
-  }
-  
-  button {
-    background-color: #00A9FF;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .comment-list {
-    margin: 10px;
-  }
-  
-  .comment {
-    margin: 10px;
-    padding: 10px;
-    background-color: #1e1e1e; 
-    border: 2px solid #00A9FF; 
-    border-radius: 5px;
-  }
+  font-family: 'Inter', sans-serif;
+  color: #fff; 
+  background-color: #121212; 
+}
+
+header {
+  background-color: #121212;
+  padding: 20px;
+}
+
+.logo img {
+  width: 100px; 
+}
+
+.banner {
+  position: relative;
+  height: 400px; 
+  color: #fff;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.banner h1 {
+  font-family: 'Vast Shadow', cursive;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.left-column {
+  flex: 2; 
+  padding-left: 50px;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.movie-card {
+  margin: 10px;
+  padding: 10px;
+  background-color: #1e1e1e; 
+  border: 2px solid #00A9FF; 
+  width: 25%;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto; 
+}
+
+.movie-card h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.movie-card p {
+  margin: 5px 0;
+}
+
+.comment-input {
+  margin: 20px;
+  width: 85%;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #00A9FF; 
+  background-color: #1e1e1e; 
+  color: #fff;
+}
+
+button {
+  background-color: #00A9FF;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-list {
+  margin: 10px; /* Adjusted margin */
+}
+
+.comment {
+  margin: 10px;
+  padding: 10px;
+  background-color: #1e1e1e; 
+  border: 2px solid #00A9FF; 
+  border-radius: 5px;
+}
 
 .search-bar {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-bar input {
-    width: 200px;
-    padding: 10px;
-    margin-right: 10px;
-    border: 2px solid #00A9FF;
-    background-color: #1e1e1e;
-    color: #fff;
-  }
-  
-  .search-bar button {
-    background-color: #00A9FF;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .movie-cards{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-  }
+  margin-bottom: 10px; /* Adjusted margin */
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 300px; /* Adjusted width */
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #00A9FF;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.search-bar button {
+  background-color: #00A9FF;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px; 
+}
+
+.popular-movies {
+  padding-left: 50px; 
+}
+
+/* style.css */
+
+.tabs {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.tabs button {
+  background-color: #00A9FF;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tabs button.active {
+  background-color: #005e91; /* Adjust the color for the active tab */
+}
+
+/* ... rest of your styles ... */
+
+/* style.css */
+/* Add this CSS to your existing style.css file or create a new one */
+
+/* WebKit browsers (Chrome, Safari) */
+/* You might need to adjust the width and height to fit your design */
+/* Also, you can customize other properties like background, border, etc. */
+
+/* Track */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #00A9FF; /* Primary color */
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0077CC; /* Darker shade or different color on hover */
+}

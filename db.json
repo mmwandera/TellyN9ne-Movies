@@ -1,24 +1,24 @@
 {
   "comments": [
     {
-      "id": 1,
-      "name": "Mark",
-      "comment": "I liked that movie"
+      "name": "Joan Muhingo",
+      "comment": "Oppenheimer is a must watch ",
+      "id": 6
     },
     {
-      "id": 2,
-      "name": "Joseph",
-      "comment": "I liked it too"
+      "name": "Michael Muniu",
+      "comment": "I liked Killers of the Flower Moon, nice acting by Leonardo Dicaprio. anyone who really loves movies must check it out",
+      "id": 7
     },
     {
-      "id": 3,
-      "name": "Joan",
-      "comment": "Same here!"
+      "name": "Joseph Dena",
+      "comment": "Didn't like Wonka at all!!!",
+      "id": 8
     },
     {
-      "id": 4,
-      "name": "Michael",
-      "comment": "I as well"
+      "name": "Mark Wandera",
+      "comment": "Watched the creator yesterday. Top top top movie indeed",
+      "id": 9
     }
   ]
 }
