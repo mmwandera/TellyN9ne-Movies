@@ -1,7 +1,8 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #fff; 
-    background-color: #121212; 
+    background-color: #121212;
+    transition: background-color 0.5s ease;
   }
   
   header {
@@ -91,6 +92,7 @@ button {
   padding: 10px;
   border: none;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 
 .comment-list {
@@ -125,4 +127,5 @@ button {
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius:0.5rem;
   }
