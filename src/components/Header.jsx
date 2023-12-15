@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
         <div className="logo">
-            <img src="" alt="Telly9ne Movies Logo" />
+            <img src={require('./assets/tm-logo.png')} alt="Telly9ne Movies Logo" />
         </div>
     </header>
   );

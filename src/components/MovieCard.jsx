@@ -10,7 +10,7 @@ function MovieCard({ movie }) {
   let chipText;
 
   if (roundedRating > 0) {
-    if (roundedRating > 7) {
+    if (roundedRating >= 7) {
       chipColor = 'green';
     } else if (roundedRating >= 6 && roundedRating <= 6.9) {
       chipColor = 'yellow';

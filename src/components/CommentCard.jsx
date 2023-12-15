@@ -1,16 +1,20 @@
 import React from 'react';
 import './style.css';
 
-function CommentCard (){
-    return(
-        <div className="comment-card">
-            <div className="comment-info">
-                <h3>{/* name */}</h3>
-                <p>{/* comment */}</p>
-            </div>
-            <button>Delete</button>
-        </div>
-    )
+function CommentCard({ comment, onDeleteComment }) {
+  const handleDelete = () => {
+    onDeleteComment(comment.id);
+  };
+
+  return (
+    <div className="comment-card">
+      <div className="comment-info">
+        <h3>{comment.name}</h3>
+        <p>{comment.comment}</p>
+      </div>
+      <button onClick={handleDelete}>Delete</button>
+    </div>
+  );
 }
 
-export default CommentCard
+export default CommentCard;
