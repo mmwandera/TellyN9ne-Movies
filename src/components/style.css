@@ -159,3 +159,9 @@ h3 {
 .red {
   background-color: rgba(255, 0, 0, 0.8); /* Adjust opacity for red color */
 }
+
+.search-results-movie-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}

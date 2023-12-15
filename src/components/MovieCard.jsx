@@ -7,12 +7,20 @@ function MovieCard({ movie }) {
 
   // Determine the color of the chip based on the rating range
   let chipColor;
-  if (roundedRating > 7) {
-    chipColor = 'green';
-  } else if (roundedRating >= 6 && roundedRating <= 6.9) {
-    chipColor = 'yellow';
+  let chipText;
+
+  if (roundedRating > 0) {
+    if (roundedRating > 7) {
+      chipColor = 'green';
+    } else if (roundedRating >= 6 && roundedRating <= 6.9) {
+      chipColor = 'yellow';
+    } else {
+      chipColor = 'red';
+    }
+    chipText = roundedRating;
   } else {
-    chipColor = 'red';
+    chipColor = 'greyish';
+    chipText = 'Not Rated';
   }
 
   return (
@@ -20,8 +28,8 @@ function MovieCard({ movie }) {
       <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`Movie Poster for ${movie.title}`} />
       <h3 style={{ color: '#00A9FF', marginBottom: '5px' }}>{movie.title}</h3>
       <p style={{ fontSize: '14px', marginBottom: '5px', display: 'flex', alignItems: 'center' }}>
-        <span style={{ marginRight: '5px', fontWeight: 'bold' }}>Rating:</span> 
-        <span className={`rating-chip ${chipColor}`}>{roundedRating}</span>
+        <span style={{ marginRight: '5px', fontWeight: 'bold' }}>Rating:</span>
+        <span className={`rating-chip ${chipColor}`}>{chipText}</span>
       </p>
       <p style={{ fontSize: '14px', marginBottom: '5px' }}>
         <span style={{ marginRight: '5px', fontWeight: 'bold' }}>Release Date:</span>
