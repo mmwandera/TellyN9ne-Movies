@@ -1,27 +1,161 @@
 body {
-    font-family: 'Space Grotesk', sans-serif;
-  }
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #121212; /* Dark background color for dark mode */
+  color: #FFFFFF; /* Text color */
+}
 
 h1 {
-font-weight: 600; /* Bold */
-  }
+  font-weight: 600; /* Bold */
+}
 
 h2 {
-font-weight: 500; /* Semi-bold */
-  }
+  font-weight: 500; /* Semi-bold */
+}
 
 h3 {
-font-weight: 400; /* Medium */
-  }
-  
+  font-weight: 400; /* Medium */
+}
+
 .content {
-display: flex;
-  }
+  display: flex;
+}
 
 .tabs-section {
-flex: 2; /* Takes two-thirds of the available space */
-  }
+  flex: 2;
+  padding: 20px 40px 20px 20px; /* Adjust left padding */
+  background-color: #121212; /* Dark background for tabs section */
+}
 
-.movie-talk-section {
-flex: 1; /* Takes one-third of the available space */
-  }
+/* Styling for Tabs */
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.tab-buttons button {
+  background-color: #00A9FF; /* Primary color for tab buttons */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.tab-buttons button.active {
+  background-color: #007ACC; /* Darker shade for active tab */
+}
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Styling for MovieCard component */
+.movie-card {
+  background-color: #1E1E1E; /* Dark card background */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+}
+
+.movie-card img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+.movie-card h3 {
+  color: #00A9FF; /* Primary color blue for the title */
+  margin-bottom: 5px; /* Reduce space between title and other text */
+}
+
+.movie-card p {
+  font-size: 14px; /* Similar size for rating and date */
+  margin-bottom: 5px; /* Reduce space between text and date/rating */
+}
+
+/* Styling for CommentCard component */
+.comment-card {
+  background-color: #1E1E1E; /* Dark card background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-info {
+  flex: 1;
+}
+
+.comment-info h3 {
+  margin-bottom: 10px;
+}
+
+.comment-info p {
+  margin: 0;
+}
+
+.comment-card button {
+  background-color: #FF4500; /* Delete button color */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for Search component */
+.search-section {
+  padding: 20px;
+  background-color: #121212; /* Dark background for search section */
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+}
+
+.search-bar button {
+  background-color: #00A9FF; /* Search button color */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for rating chip */
+.rating-chip {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  opacity: 0.8; /* Adjust opacity as needed */
+}
+
+.green {
+  background-color: rgba(0, 128, 0, 0.8); /* Adjust opacity for green color */
+}
+
+.yellow {
+  background-color: rgba(255, 255, 0, 0.8); /* Adjust opacity for yellow color */
+  color: #000; /* Change text color for better visibility */
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.8); /* Adjust opacity for red color */
+}
