@@ -48,7 +48,7 @@ body {
   
   .right-column {
     flex: 1;
-<<<<<<< HEAD
+
 }
 
 .movie-card {
@@ -57,7 +57,10 @@ body {
   background-color: #1e1e1e; 
   border: 2px solid #00A9FF; 
 }
-
+.movie-card:hover{
+ background-color: #fff;
+ color:#00A9FF;
+}
 .movie-card img {
   width: 100%;
   height: auto; 
@@ -95,12 +98,15 @@ button {
   cursor: pointer;
   border-radius: 0.5rem;
 }
-
+button:hover{
+    background-color: #fff;
+    color:hsl(200, 100%, 50%);
+}
 .comment-list {
   margin: 10px;
 }
 .comment {
-=======
+
   }
   
   .movie-card {
@@ -109,6 +115,7 @@ button {
     background-color: #1e1e1e; 
     border: 2px solid #00A9FF; 
     width: 25%;
+    border-radius: 0.5rem;
   }
   
   .movie-card img {
@@ -152,7 +159,6 @@ button {
   }
   
   .comment {
->>>>>>> development
     margin: 10px;
     padding: 10px;
     background-color: #1e1e1e; 
@@ -183,7 +189,10 @@ button {
     cursor: pointer;
     border-radius:0.5rem;
   }
-  
+  .search-bar button:hover{
+    background-color: #fff;
+    color:hsl(200, 100%, 50%);
+}
   .movie-cards{
     display: flex;
     flex-wrap: wrap;
