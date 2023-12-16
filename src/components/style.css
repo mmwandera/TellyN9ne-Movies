@@ -48,6 +48,7 @@ body {
   
   .right-column {
     flex: 1;
+<<<<<<< HEAD
 }
 
 .movie-card {
@@ -99,6 +100,59 @@ button {
   margin: 10px;
 }
 .comment {
+=======
+  }
+  
+  .movie-card {
+    margin: 10px;
+    padding: 10px;
+    background-color: #1e1e1e; 
+    border: 2px solid #00A9FF; 
+    width: 25%;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto; 
+  }
+  
+  .movie-card h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .movie-card p {
+    margin: 5px 0;
+  }
+  
+  .comment-input {
+    margin: 10px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #00A9FF; 
+    background-color: #1e1e1e; 
+    color: #fff;
+  }
+  
+  button {
+    background-color: #00A9FF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .comment-list {
+    margin: 10px;
+  }
+  
+  .comment {
+>>>>>>> development
     margin: 10px;
     padding: 10px;
     background-color: #1e1e1e; 
@@ -128,4 +182,10 @@ button {
     border: none;
     cursor: pointer;
     border-radius:0.5rem;
+  }
+  
+  .movie-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
   }

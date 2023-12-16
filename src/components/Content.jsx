@@ -2,6 +2,7 @@ import React from 'react';
 import PopularMovies from './PopularMovies';
 import CommentsSection from './CommentsSection';
 import './style.css';
+
 function Content() {
     return (
       <section className="content">
