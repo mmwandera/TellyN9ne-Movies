@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './style.css';
+
+function TabButton({ label, tab, activeTab, onClick }) {
+  return (
+    <Link to={`/${tab}`}>
+      <button className={activeTab === tab ? 'active' : ''} onClick={() => onClick(tab)}>
+        {label}
+      </button>
+    </Link>
+  );
+}
 
 function Tabs() {
   const [movies, setMovies] = useState([]);
@@ -40,16 +51,20 @@ function Tabs() {
   };
 
   return (
-    <section className="tabs-section">
-      <div className="tab-buttons">
-        <button className={activeTab === 'popular' ? 'active' : ''} onClick={() => handleTabClick('popular')}>Popular</button>
-        <button className={activeTab === 'top_rated' ? 'active' : ''} onClick={() => handleTabClick('top_rated')}>Top Rated</button>
-        <button className={activeTab === 'upcoming' ? 'active' : ''} onClick={() => handleTabClick('upcoming')}>Upcoming</button>
-      </div>
-      <div className="movie-cards">
-        {movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
-      </div>
-    </section>
+    <Router>
+      <section className="tabs-section">
+        <div className="tab-buttons">
+          <TabButton label="Popular" tab="popular" activeTab={activeTab} onClick={handleTabClick} />
+          <TabButton label="Top Rated" tab="top_rated" activeTab={activeTab} onClick={handleTabClick} />
+          <TabButton label="Upcoming" tab="upcoming" activeTab={activeTab} onClick={handleTabClick} />
+        </div>
+
+        {/* Define routes for each tab */}
+        <Route path="/popular" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
+        <Route path="/top_rated" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
+        <Route path="/upcoming" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
+      </section>
+    </Router>
   );
 }
 
