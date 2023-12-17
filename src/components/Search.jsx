@@ -14,6 +14,7 @@ function Search() {
     fetch(`${APIURL}search/movie?api_key=${APIKEY}&query=${searchTerm}&include_adult=false&language=en-US&page=1`)
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         setFilteredMovies(data.results);
       });
   };
@@ -35,7 +36,7 @@ function Search() {
             <MovieCard key={movie.id} movie={movie} />
           ))
         ) : (
-          <p>No results found</p>
+          <p>No movies found.</p>
         )}
       </div>
     </section>

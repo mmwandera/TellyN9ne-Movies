@@ -35,6 +35,10 @@ function MovieCard({ movie }) {
         <span style={{ marginRight: '5px', fontWeight: 'bold' }}>Release Date:</span>
         <span style={{ marginLeft: '5px' }}>{movie.release_date}</span>
       </p>
+      <p style={{ fontSize: '14px', marginBottom: '5px' }}>
+        <span style={{ marginRight: '5px', fontWeight: 'bold' }}>Overview:</span>
+        <span style={{ marginLeft: '5px' }}>{movie.overview}</span>
+      </p>
     </div>
   );
 }

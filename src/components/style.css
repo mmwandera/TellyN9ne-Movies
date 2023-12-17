@@ -41,6 +41,7 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth background color transition */
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .tab-buttons button.active {
@@ -119,6 +120,8 @@ h3 {
 
 .search-bar {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -128,15 +131,21 @@ h3 {
   padding: 10px;
   border-radius: 5px;
   border: #00A9FF 2px solid;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .search-bar button {
   background-color: #00A9FF; /* Search button color */
   color: #FFFFFF;
   border: none;
-  padding: 10px;
+  padding: 10px 40px 10px 40px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.search-bar button:hover{
+  background-color: #007acc;
 }
 
 /* Styling for rating chip */
@@ -186,6 +195,8 @@ textarea {
   margin-top: 5px;
   border-radius: 5px;
   border: #00A9FF 2px solid;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
 }
 
 input{
@@ -194,6 +205,8 @@ input{
   box-sizing: border-box;
   border-radius: 5px;
   border: #00A9FF 2px solid;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
 }
 
 .search-button {
@@ -204,6 +217,7 @@ input{
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .search-button:hover {
