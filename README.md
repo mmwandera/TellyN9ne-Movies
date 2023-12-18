@@ -29,7 +29,7 @@ Telly9ne Movies is a movie database where users can discover all kinds of movies
 
 ### Live Link
 
-Link to site [https://telly9ne-movies.onrender.com/]
+[https://telly9ne-movies.onrender.com/]
 
 ## Technologies used
 
@@ -51,6 +51,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-MIT License &copy 2019 Victor
+MIT License 
