@@ -1,62 +1,56 @@
-# Project Title
+# Telly9ne Movies
 
-Simple overview of use/purpose.
+![t9](https://github.com/mmwandera/TellyN9ne-Movies/assets/130316212/86b73dfd-5155-4aaf-b594-c9972a79c028)
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Telly9ne Movies is a movie database where users can discover all kinds of movies. Users are also able to share their views about their favorite movies.
 
-## Getting Started
+## Developers
 
-### Dependencies
+* Mark Wandera
+* Michael Muniu
+* Joseph Dena
+* Joan Muhingo
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+### Requirements
 
-### Installing
+* React
+* JavaScript
+* Visual Studio Code as Code Editor
+* Web Browser
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+### Getting Started
 
-### Executing program
+* Clone the repository
+* Install the dependencies using ```npm install```
+* Run the server using ```npm start```
+* View on your default browser
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+### Live Link
 
-## Help
+Link to site [https://telly9ne-movies.onrender.com/]
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+## Technologies used
 
-## Authors
+* React
+* JavaScript
+* HTML
+* CSS
+* GitHub
 
-Contributors names and contact info
+## Dependencies
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+* React: JavaScript library for building user interfaces.
+* React Router : This is a DOM binding for react router
+* Other dependencies as specified in package.json
 
-## Version History
+## Contributions
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
 
 ## License
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+MIT License &copy 2019 Victor
