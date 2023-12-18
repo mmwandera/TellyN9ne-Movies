@@ -34,6 +34,9 @@ function Tabs() {
       case 'upcoming':
         url = `${APIURL}movie/upcoming?api_key=${APIKEY}&language=en-US&page=1`;
         break;
+      case 'now_playing':
+        url = `${APIURL}movie/now_playing?api_key=${APIKEY}&language=en-US&page=1`;
+        break;
       default:
         url = `${APIURL}movie/popular?api_key=${APIKEY}&language=en-US&page=1`;
         break;
@@ -57,12 +60,13 @@ function Tabs() {
           <TabButton label="Popular" tab="popular" activeTab={activeTab} onClick={handleTabClick} />
           <TabButton label="Top Rated" tab="top_rated" activeTab={activeTab} onClick={handleTabClick} />
           <TabButton label="Upcoming" tab="upcoming" activeTab={activeTab} onClick={handleTabClick} />
+          <TabButton label="Now Playing" tab="now_playing" activeTab={activeTab} onClick={handleTabClick} />
         </div>
 
-        {/* Define routes for each tab */}
-        <Route path="/popular" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
+        <Route path="/" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
         <Route path="/top_rated" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
         <Route path="/upcoming" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
+        <Route path="/now_playing" render={() => <div className="movie-cards">{movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}</div>} />
       </section>
     </Router>
   );
