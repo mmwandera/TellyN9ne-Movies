@@ -29,7 +29,7 @@ Telly9ne Movies is a movie database where users can discover all kinds of movies
 
 ### Live Link
 
-[https://telly9ne-movies.onrender.com/]
+https://telly9ne-movies.onrender.com/
 
 ## Technologies used
 
