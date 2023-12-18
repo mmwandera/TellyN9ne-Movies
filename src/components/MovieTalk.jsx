@@ -8,7 +8,7 @@ function MovieTalk() {
   const [userName, setUserName] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:4000/comments')
+    fetch('https://telly9ne-movies-backend.onrender.com/comments')
       .then((response) => response.json())
       .then((data) => {
         setComments(data);
@@ -23,7 +23,7 @@ function MovieTalk() {
         comment: newComment,
       };
 
-      fetch('http://localhost:4000/comments', {
+      fetch('https://telly9ne-movies-backend.onrender.com/comments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function MovieTalk() {
   };
 
   const handleDeleteComment = (commentId) => {
-    fetch(`http://localhost:4000/comments/${commentId}`, {
+    fetch(`https://telly9ne-movies-backend.onrender.com/comments/${commentId}`, {
       method: 'DELETE',
     })
       .then((response) => {
