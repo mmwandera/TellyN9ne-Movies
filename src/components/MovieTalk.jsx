@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import CommentCard from './CommentCard';
 import './style.css';
 
@@ -6,14 +6,19 @@ function MovieTalk() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
   const [userName, setUserName] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://telly9ne-movies-backend.onrender.com/comments')
       .then((response) => response.json())
       .then((data) => {
         setComments(data);
+        setIsLoading(false);
       })
-      .catch((error) => console.error('Error fetching comments:', error));
+      .catch((error) => {
+        console.error('Error fetching comments:', error);
+        setIsLoading(false);
+      });
   }, []);
 
   const handlePostComment = () => {
@@ -83,7 +88,15 @@ function MovieTalk() {
           </button>
         </div>
       </div>
-      <div className="comment-list">{commentsCardsToShow}</div>
+      <div className="comment-list">
+        {isLoading ? (
+          <p>Loading comments...</p>
+        ) : comments.length === 0 ? (
+          <p>No comments available</p>
+        ) : (
+          commentsCardsToShow
+        )}
+      </div>
     </section>
   );
 }

@@ -31,12 +31,10 @@ function Search() {
         <button onClick={handleSearch}>Search</button>
       </div>
       <div className="search-results-movie-cards">
-        {filteredMovies.length > 0 ? (
+        {(
           filteredMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))
-        ) : (
-          <p>No movies found.</p>
         )}
       </div>
     </section>
